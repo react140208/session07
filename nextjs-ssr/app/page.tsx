@@ -1,16 +1,13 @@
-"use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-export default function Home() {
-  const [data, setData] = useState<any>();
-  useEffect(() => {
-    async () => {
-      const resp = await fetch("https://jsonplaceholder.typicode.com/posts");
-      const json = await resp.json();
-      setData(json);
-    };
-  });
+const getData = async () => {
+  const resp = await fetch("https://jsonplaceholder.typicode.com/posts");
+  return await resp.json();
+};
+
+export default async function Home() {
+  const data = await getData();
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
