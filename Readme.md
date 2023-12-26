@@ -62,3 +62,8 @@ Bootstrap.css
 .p4 {
     padding: 4px;
 }
+
+
+
+## NextJS + Prisma
+https://github.com/prisma/prisma-examples/tree/latest/typescript/rest-nextjs-api-routes
